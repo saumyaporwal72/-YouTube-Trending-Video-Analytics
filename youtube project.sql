@@ -46,7 +46,7 @@ SELECT
 SUM(CASE WHEN views IS NULL THEN 1 ELSE 0 END) AS null_views,
 SUM(CASE WHEN likes IS NULL THEN 1 ELSE 0 END) AS null_likes,
 SUM(CASE WHEN comments IS NULL THEN 1 ELSE 0 END) AS null_comments
-FROM your_table;
+FROM youtube_data;
 
 SELECT 
 COUNT(*) 
@@ -61,7 +61,7 @@ FROM youtube_data
 GROUP BY video_id
 HAVING COUNT(*) > 1;
 
--- Check negative values (very important in interviews)
+-- Check negative values 
 SELECT *
 FROM youtube_data
 WHERE views < 0 
@@ -74,7 +74,7 @@ select count(*) from youtube_data;
 -- Total views
 select sum(views) as total_views from youtube_data;   
 
--- 3️⃣ Average engagement rate
+--  Average engagement rate
 select avg(engagement_rate) from youtube_data;
 
 -- Top 10 most viewed videos
@@ -83,7 +83,7 @@ from youtube_data
 order by views desc
 limit 10;
  
- -- 5️⃣ Distinct countries
+ --  Distinct countries
  select distinct(country) from youtube_data;
 
 -- Trending %
@@ -274,7 +274,6 @@ GROUP BY channel_name, grp_key
 HAVING COUNT(*) >= 3;
 
 -- Median Using Window (Real Way)
--- MySQL doesn’t support percentile:
 SELECT AVG(engagement_rate)
 FROM (
     SELECT engagement_rate,
