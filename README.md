@@ -1,4 +1,5 @@
 # -YouTube-Trending-Video-Analytics
+>
 '''sql
 SELECT 
 COUNT(*) 
@@ -8,22 +9,24 @@ WHERE views IS NULL
    OR comments IS NULL;
 '''   
    
--- check duplicate
+## check duplicate
 '''sql
 SELECT video_id, COUNT(*)
 FROM youtube_data
 GROUP BY video_id
 HAVING COUNT(*) > 1;
 '''
--- Check negative values (very important in interviews)
+>
+## Check negative values (very important in interviews)
 '''sql
 SELECT *
 FROM youtube_data
 WHERE views < 0 
    OR likes < 0 
    OR comments < 0;
-'''   
--- -- Total number of videos
+'''
+>
+## Total number of videos
 '''sql
 select count(*) from youtube_data;
 '''
