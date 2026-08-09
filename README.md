@@ -1,13 +1,13 @@
 # -YouTube-Trending-Video-Analytics
 >
-'''sql
+```sql
 SELECT 
 COUNT(*) 
 FROM youtube_data
 WHERE views IS NULL 
    OR likes IS NULL 
    OR comments IS NULL;
-'''   
+```  
    
 ## check duplicate
 '''sql
