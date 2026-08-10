@@ -4,6 +4,16 @@
 ## Overview
 This project analyzes a dataset of YouTube videos to uncover patterns behind views, engagement, and trending behavior. All analysis is done in MySQL, covering everything from data cleaning to advanced window-function analytics, cohort analysis, and A/B-style comparisons.
 >
+
+##  Problem Statement
+
+YouTube generates a massive amount of video content every day, making it challenging for creators, marketers, and businesses to understand what drives video performance and audience engagement.
+
+This project analyzes YouTube video data to identify the key factors influencing **views, likes, comments, engagement, and trending performance**. The analysis focuses on understanding how content category, video duration, publishing time, channel performance, and geographic factors impact audience engagement.
+
+The goal is to use **SQL and data analysis techniques** to transform raw YouTube data into actionable business insights that can help content creators and marketers make data-driven decisions about content strategy.
+>
+
 ```sql
 SELECT 
 COUNT(*) 
