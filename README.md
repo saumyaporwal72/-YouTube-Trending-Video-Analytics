@@ -1,5 +1,9 @@
 # -YouTube-Trending-Video-Analytics
 >
+
+## Overview
+This project analyzes a dataset of YouTube videos to uncover patterns behind views, engagement, and trending behavior. All analysis is done in MySQL, covering everything from data cleaning to advanced window-function analytics, cohort analysis, and A/B-style comparisons.
+>
 ```sql
 SELECT 
 COUNT(*) 
