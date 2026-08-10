@@ -12,6 +12,26 @@ YouTube generates a massive amount of video content every day, making it challen
 This project analyzes YouTube video data to identify the key factors influencing **views, likes, comments, engagement, and trending performance**. The analysis focuses on understanding how content category, video duration, publishing time, channel performance, and geographic factors impact audience engagement.
 
 The goal is to use **SQL and data analysis techniques** to transform raw YouTube data into actionable business insights that can help content creators and marketers make data-driven decisions about content strategy.
+
+## 📊 Dataset
+
+The core dataset is stored in the `youtube_data` table and contains video-level information covering content details, audience metrics, engagement, and trending performance.
+
+| Column             | Data Type    | Description                                              |
+| ------------------ | ------------ | -------------------------------------------------------- |
+| `video_id`         | VARCHAR(50)  | Unique identifier for each video                         |
+| `video_title`      | VARCHAR(255) | Title of the video                                       |
+| `channel_name`     | VARCHAR(255) | Name of the channel that uploaded the video              |
+| `category`         | VARCHAR(100) | Category of the video content                            |
+| `publish_date`     | DATETIME     | Date and time when the video was published               |
+| `views`            | BIGINT       | Total number of views received by the video              |
+| `likes`            | BIGINT       | Total number of likes received                           |
+| `comments`         | BIGINT       | Total number of comments received                        |
+| `duration_seconds` | INT          | Video duration in seconds                                |
+| `country`          | VARCHAR(100) | Country associated with the audience/upload              |
+| `is_trending`      | VARCHAR(10)  | Indicates whether the video became trending (`Yes`/`No`) |
+| `engagement_rate`  | FLOAT        | Precomputed engagement rate based on user interactions   |
+
 >
 
 ```sql
